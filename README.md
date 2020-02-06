@@ -15,4 +15,17 @@ Client uses websockets to push data to server.
 The stats are stored in redis.
 
 
-## How to
+## How to run
+1. Run server
+2. Run client
+
+## Commands:
+See all connected clients:\
+lsof -i -n | grep python3
+
+## Requirements
+- \>= Python 3.7.0
+- asyncio
+
+## Referemce
+https://medium.com/@pgjones/an-asyncio-socket-tutorial-5e6f3308b8b0

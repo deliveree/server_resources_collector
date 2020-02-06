@@ -1,1 +1,4 @@
 .vscode
+.client_cred.py
+.server_cred.py
+__pycache__

@@ -2,20 +2,23 @@ import socket
 import logging
 from psycopg2 import connect
 
+# from client.main import setup
 
 def setup():
     global sock, db_con
 
-    db_con = connect(
-        database="",
-        user="",
-        password="",
-        host="localhost",
-    )
+    # db_con = connect(
+    #     database="",
+    #     user="",
+    #     password="",
+    #     host="localhost",
+    # )
 
-    server_address = ('localhost', 3333)
-    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    sock.connect(server_address)
+server_address = ('18.223.41.243', 15330)
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+sock.connect(server_address)
+sock.send(b'BIBIB')
+sock.close()
 
 
 
@@ -80,3 +83,4 @@ def main():
         logging.error(ex)
     finally:
         shutdown()
+
